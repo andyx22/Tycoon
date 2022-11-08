@@ -42,7 +42,9 @@ class Tycoon:
                 total_price = asset_price * int(amount)
                 self.worth = self.worth - total_price
                 self.gen_per_sec = self.gen_per_sec + asset_gen
-
+        for j in self.inventory:
+            if asset in j:
+                j[asset] += amount
     #same as buy, but subtracts
     def sell(self, asset, amount: int):
         for i in self.assets:
@@ -52,6 +54,10 @@ class Tycoon:
                 total_price = asset_price * int(amount)
                 self.worth = self.worth + total_price
                 self.gen_per_sec = self.gen_per_sec - asset_gen
+        for j in self.inventory:
+            if asset in j:
+                j[asset] -= amount
+
 
     #Takes 1 arg: interval. adds self.gen_per_sec to self.worth every time interval in seconds. Default is once every second
     def gen(self, interval=1):
