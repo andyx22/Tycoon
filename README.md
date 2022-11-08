@@ -9,6 +9,9 @@ Tycoon class:
 		The self.gen_per_sec is how much currency the tycoon creates every second(the time interval can be ajusted)
 		The self.assets is a list full of added dictionaries that specify an asset, its cost, and its gen_per_sec
 		The self.inventory is a list with a dicitonary of assets and how many the tycoon owns.	
+		
+		
+		
 	add_asset() takes 3 args: name, cost, and gen.
 		it appends an dict in the self.assets list with the format: {"name": str(name), "cost": int(cost), "gen": int(gen)}
 		then appends a dict in the self.inventory list with the format: {name: 0}. "0" being amount currently owned
