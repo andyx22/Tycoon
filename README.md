@@ -4,14 +4,12 @@ Overview:
 	uses 'time', 'threading' modules
 	
 Tycoon class:
+
     __init__() initializes the tycoon's name, worth, gen_per_sec, assets and inventory. 
 		The name, worth, and gen_per_sec are args required when creating the object. 
 		The self.gen_per_sec is how much currency the tycoon creates every second(the time interval can be ajusted)
 		The self.assets is a list full of added dictionaries that specify an asset, its cost, and its gen_per_sec
-		The self.inventory is a list with a dicitonary of assets and how many the tycoon owns.	
-		
-		
-		
+		The self.inventory is a list with a dicitonary of assets and how many the tycoon owns.		
 	add_asset() takes 3 args: name, cost, and gen.
 		it appends an dict in the self.assets list with the format: {"name": str(name), "cost": int(cost), "gen": int(gen)}
 		then appends a dict in the self.inventory list with the format: {name: 0}. "0" being amount currently owned
@@ -29,6 +27,7 @@ Tycoon class:
 startup() uses multithreading to start a background process which handles the generation of currency in gen()
 
 Tips:
+
 	when making a Tycoon class, also add_asset all the assets needed. 
 	Problems will happen if you try to go forward without any assets. 
 		
