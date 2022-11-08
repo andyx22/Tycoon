@@ -1,7 +1,9 @@
 # Tycoon
 Overview: 
+
 	Creates a class called Tycoon, which represents a real-world company. 
 	uses 'time', 'threading' modules
+	Sorry for the format. I'd like feedback.
 	
 Tycoon class:
 
